@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-if number > 0:
-    print("{} is positive".format(number))
-elif number < 0:
-    print("{} is negative".format(number))
-else:
-    print("{} is zero".format(number))
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz", end=" ")
+    elif i % 3 == 0:
+        print("Fizz", end=" ")
+    elif i % 5 == 0:
+        print("Buzz", end=" ")
+    else:
+        print(i, end=" ")
