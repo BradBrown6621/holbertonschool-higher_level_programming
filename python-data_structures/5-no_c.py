@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def no_c(my_string):
+    if len(my_string) > 0:
+        substring = ""
+        for i in range(len(my_string)):
+            if my_string[i] == 'c' or my_string[i] == 'C':
+                continue
+            else:
+                substring = substring + my_string[i]
+        return substring
