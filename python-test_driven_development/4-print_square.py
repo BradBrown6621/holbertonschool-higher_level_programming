@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Module for printing a square of #"""
 
+
 def print_square(size):
+    """Prints a square of size size"""
     if isinstance(size, int):
         if size < 0:
             raise ValueError("size must be >= 0")
