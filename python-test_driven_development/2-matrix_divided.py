@@ -2,7 +2,6 @@
 """Module for matrix division"""
 
 
-
 def matrix_divided(matrix, div):
     """Function for matrix division"""
     typeerror = "matrix must be a matrix (list of lists) of integers/floats"
