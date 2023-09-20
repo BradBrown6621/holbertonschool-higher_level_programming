@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Square:
+"""Declares a class Square"""
 
+
+class Square:
+    """Square with error handling"""
     def __init__(self, size=0):
         try:
             size * 1

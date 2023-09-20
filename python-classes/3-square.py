@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Square:
+"""Declares a class Square"""
 
+
+class Square:
+    """Square with size"""
     def __init__(self, size=0):
         try:
             size * 1
@@ -13,4 +16,5 @@ class Square:
             print("size must be an integer")
 
     def area(self):
+        """Defines area of a square"""
         return self.__size ** 2
