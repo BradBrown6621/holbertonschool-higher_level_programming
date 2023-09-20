@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""Module for matrix division"""
+
 
 
 def matrix_divided(matrix, div):
