@@ -5,6 +5,7 @@
 class Square:
     """Square with size"""
     def __init__(self, size=0):
+        """On Initialization"""
         try:
             size * 1
             size >= 0

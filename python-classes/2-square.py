@@ -5,6 +5,7 @@
 class Square:
     """Square with error handling"""
     def __init__(self, size=0):
+        """On initialization"""
         try:
             size * 1
             size >= 0
