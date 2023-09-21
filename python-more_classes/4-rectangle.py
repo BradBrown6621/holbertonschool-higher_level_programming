@@ -63,3 +63,9 @@ class Rectangle():
             string = string + "#" * self.width + "\n"
 
         return string[:-1]
+
+    def __repr__(self):
+        """
+        Returns a string representation of Rectangle used by eval()
+        """
+        return "Rectangle({}, {})".format(self.width, self.height)
