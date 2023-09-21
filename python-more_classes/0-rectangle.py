@@ -2,7 +2,7 @@
 """Module that defines a rectangle"""
 
 
-class Rectangle():
+class Rectangle:
     """A definition of a rectangle"""
 
 
