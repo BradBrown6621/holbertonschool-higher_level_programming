@@ -4,4 +4,6 @@
 
 class Rectangle():
     """A definition of a rectangle"""
+
+
     pass
