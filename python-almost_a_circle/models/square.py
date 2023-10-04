@@ -10,7 +10,13 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
-        return "{} ({}) {}/{} - {}".format("Square", self.id, self.x, self.y, self.__size)
+        return "{} ({}) {}/{} - {}".format(
+                "Square",
+                self.id,
+                self.x,
+                self.y,
+                self.__size
+                )
 
     @property
     def size(self):
@@ -30,7 +36,7 @@ class Square(Rectangle):
                 self.__size = args[1]
                 Rectangle.x = args[2]
                 Rectangle.y = args[3]
-            except:
+            except Exception:
                 pass
         else:
             for key, item in kwargs.items():

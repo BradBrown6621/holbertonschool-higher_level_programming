@@ -72,13 +72,14 @@ class Rectangle(Base):
 
     def __str__(self):
         return "{} ({}) {}/{} - {}/{}".format(
-                "Rectangle", 
-                self.id, 
-                self.__x, 
-                self.__y, 
-                self.__width, 
+                "Rectangle",
+                self.id,
+                self.__x,
+                self.__y,
+                self.__width,
                 self.__height
                 )
+
     def update(self, *args):
         try:
             self.id = args[0]
@@ -86,7 +87,7 @@ class Rectangle(Base):
             self.__height = args[2]
             self.__x = args[3]
             self.__y = args[4]
-        except:
+        except Exception:
             pass
 
     def validate_ints(self, value, value_name):
