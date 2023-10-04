@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """models/rectangle.py"""
+
+
 from models.base import Base
 
 
@@ -7,7 +9,7 @@ class Rectangle(Base):
     """Defines a Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """On instancing..."""
+        """Class constructor for instances of Rectangles"""
         super().__init__(id)
 
         self.validate_natural_nums(width, "width")
@@ -24,50 +26,52 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Width property"""
+        """Width of Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, width):
-        """Sets width"""
+        """Sets width to a natural number"""
         self.validate_natural_nums(width, 'width')
         self.__width = width
 
     @property
     def height(self):
-        """Height property"""
+        """Height of Rectangle"""
         return self.__height
 
     @height.setter
     def height(self, height):
-        """Sets height"""
+        """Sets height to a natural number"""
         self.validate_natural_nums(height, 'height')
         self.__height = height
 
     @property
     def x(self):
-        """x-axis property"""
+        """x-axis of Rectangle"""
         return self.__x
 
     @x.setter
     def x(self, x):
-        """sets x"""
+        """Sets the x property to a whole number"""
         self.validate_whole_nums(x, 'x')
         self.__x = x
 
     @property
     def y(self):
-        """y-axis property"""
+        """y-axis of Rectangle"""
         return self.__y
 
     @y.setter
     def y(self, y):
-        """sets y"""
+        """Sets the y property to a whole number"""
         self.validate_whole_nums(y, 'y')
         self.__y = y
 
     def area(self):
-        """Area"""
+        """
+        Returns the area of the Rectangle
+        """
         return self.__width * self.__height
 
     def display(self):
