@@ -96,16 +96,31 @@ class Rectangle(Base):
                 self.__height
                 )
 
-    def update(self, *args):
+    def to_dictionary(self):
+        """Returns dictionary representation of Rectangle"""
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
+
+    def update(self, *args, **kwargs):
         """Updates Rectangle using new values"""
-        try:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
-        except Exception:
-            pass
+        if len(args) > 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except Exception:
+                pass
+        else:
+            for key, item in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, item)
 
     def validate_ints(self, value, value_name):
         """Raises errors if value isn't an int"""
