@@ -1,7 +1,7 @@
 -- 9-full_creation.sql
 -- Brad Brown
 
-CREATE TABLE second_table (
+CREATE TABLE IF NOT EXISTS second_table (
 	id INT, 
 	name VARCHAR(256),
 	score INT);
