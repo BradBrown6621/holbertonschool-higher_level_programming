@@ -3,6 +3,6 @@
 
 SELECT cities.id, cities.name
 FROM cities
-JOIN states
+LEFT JOIN states
 ON states.id = cities.id
 ORDER BY cities.id;
